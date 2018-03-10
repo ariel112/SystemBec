@@ -30,9 +30,9 @@ class AddActividades extends Migration
         Schema::create('becarios_actividades', function(blueprint $table){
             $table->increments('id');
             $table->integer('becario_id')->unsigned();
-            $table->integer('voluntariado_id')->unsigned();
+            $table->integer('actividades_id')->unsigned();
             $table->foreign('becario_id')->references('id')->on('becarios');
-            $table->foreign('voluntariado_id')->references('id')->on('voluntariados');
+            $table->foreign('actividades_id')->references('id')->on('actividades');
             
             $table->timestamps();
         });
