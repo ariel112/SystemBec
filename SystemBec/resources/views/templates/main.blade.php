@@ -131,7 +131,7 @@
 									<div id="piepagina" class="mini-posts">
 										<article>
 											<a href="#" class="image"><img src="{{asset('images/solidario.jpg')}}" alt="" /></a>
-											<p>BECA Solidaria</p>
+											<p>BECA SOLIDARIA</p>
 										</article>
 										<article>
 											<a href="#" class="image"><img src="{{asset('images/gorro1.jpg')}}" alt="" /></a>
