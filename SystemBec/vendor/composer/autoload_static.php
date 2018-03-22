@@ -367,6 +367,7 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
         'App\\Http\\Controllers\\RtnController' => __DIR__ . '/../..' . '/app/Http/Controllers/RtnController.php',
         'App\\Http\\Controllers\\VoluntariadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/VoluntariadoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\Cors' => __DIR__ . '/../..' . '/app/Http/Middleware/Cors.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',

@@ -35,6 +35,7 @@ return array(
     'App\\Http\\Controllers\\RtnController' => $baseDir . '/app/Http/Controllers/RtnController.php',
     'App\\Http\\Controllers\\VoluntariadoController' => $baseDir . '/app/Http/Controllers/VoluntariadoController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Middleware\\Cors' => $baseDir . '/app/Http/Middleware/Cors.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
