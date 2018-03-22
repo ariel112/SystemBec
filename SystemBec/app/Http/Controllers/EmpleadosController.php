@@ -157,8 +157,9 @@ class EmpleadosController extends Controller{
           
       return view('templates.admin.empleados.perfil')->with('empleados',$empleados)->with('carbon',$carbon);
 
-                              }                     
+                              }
 
+    
 
 
 

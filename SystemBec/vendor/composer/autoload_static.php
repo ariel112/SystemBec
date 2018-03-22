@@ -103,8 +103,13 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
             'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
+        'B' => 
+        array (
+            'Barryvdh\\Cors\\' => 14,
+        ),
         'A' => 
         array (
+            'Asm89\\Stack\\' => 12,
             'App\\' => 4,
         ),
     );
@@ -272,6 +277,14 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Barryvdh\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-cors/src',
+        ),
+        'Asm89\\Stack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -327,19 +340,32 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
     public static $classMap = array (
         'App\\Act_penal' => __DIR__ . '/../..' . '/app/Act_penal.php',
         'App\\Act_policial' => __DIR__ . '/../..' . '/app/Act_policial.php',
+        'App\\Actividad' => __DIR__ . '/../..' . '/app/Actividad.php',
+        'App\\Becario' => __DIR__ . '/../..' . '/app/Becario.php',
+        'App\\Becarios_Actividades' => __DIR__ . '/../..' . '/app/Becarios_Actividades.php',
+        'App\\Casa' => __DIR__ . '/../..' . '/app/Casa.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Departamento' => __DIR__ . '/../..' . '/app/Departamento.php',
         'App\\Empleado' => __DIR__ . '/../..' . '/app/Empleado.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Forma03' => __DIR__ . '/../..' . '/app/Forma03.php',
+        'App\\Grupo' => __DIR__ . '/../..' . '/app/Grupo.php',
+        'App\\Historial' => __DIR__ . '/../..' . '/app/Historial.php',
+        'App\\Http\\Controllers\\ActividadesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ActividadesController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\BecariosController' => __DIR__ . '/../..' . '/app/Http/Controllers/BecariosController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EmpleadosController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmpleadosController.php',
+        'App\\Http\\Controllers\\Forma03Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Forma03Controller.php',
+        'App\\Http\\Controllers\\HistorialController' => __DIR__ . '/../..' . '/app/Http/Controllers/HistorialController.php',
+        'App\\Http\\Controllers\\HorasActividadesController' => __DIR__ . '/../..' . '/app/Http/Controllers/HorasActividadesController.php',
         'App\\Http\\Controllers\\PenalesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PenalesController.php',
-        'App\\Http\\Controllers\\PolicialesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PolicialesController.php',
         'App\\Http\\Controllers\\ProyectosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProyectosController.php',
         'App\\Http\\Controllers\\RtnController' => __DIR__ . '/../..' . '/app/Http/Controllers/RtnController.php',
+        'App\\Http\\Controllers\\VoluntariadoController' => __DIR__ . '/../..' . '/app/Http/Controllers/VoluntariadoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -347,6 +373,7 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Image' => __DIR__ . '/../..' . '/app/Image.php',
+        'App\\Municipio' => __DIR__ . '/../..' . '/app/Municipio.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -355,8 +382,15 @@ class ComposerStaticInit354352b14e127c02ba9f2ee46715a815
         'App\\Proyecto' => __DIR__ . '/../..' . '/app/Proyecto.php',
         'App\\Rtn' => __DIR__ . '/../..' . '/app/Rtn.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Voluntariado' => __DIR__ . '/../..' . '/app/Voluntariado.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
+        'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
+        'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'Barryvdh\\Cors\\HandleCors' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandleCors.php',
+        'Barryvdh\\Cors\\HandlePreflight' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandlePreflight.php',
+        'Barryvdh\\Cors\\LumenServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/LumenServiceProvider.php',
+        'Barryvdh\\Cors\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/ServiceProvider.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',

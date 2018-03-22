@@ -7,6 +7,7 @@
 		  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		  <link rel="stylesheet" href="{{ asset('plugins/home/assets/css/main.css')}}" />
+          
           <link rel="icon" type="image/png" href="{{asset('images/icon/beca.jpg')}}" />
 
  
@@ -89,7 +90,7 @@
 						<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2>Menú</h2>
 									</header>
 									<ul>
 										<li><a id="decoracion" href="index.html">Inicio</a></li>
@@ -112,16 +113,8 @@
 										</li>
 
 										
-										
-										<li>
-											<span class="opener">Area contable</span>
-											<ul>
-												<li><a id="decoracion" href="#">Planillas</a></li>
-												
-											</ul>
-										</li>
-
-										<li><a id="decoracion" href="elements.html">Estadisticas Generales</a></li>
+						
+										<li><a id="decoracion" href="elements.html">Estadísticas Generales</a></li>
 
 										
 									</ul>
@@ -169,7 +162,7 @@
 										<h2>EDUCREDITO</h2>
 									</header>
 									<section id="piepagina">
-										<p>El Programa Precidencial de Becas Honduras 20/20 tiene como objetivo brindar oportunidades educativas paara un futuro mejor, potenciando al maximo la capacidad de formacion de nuestros jovenes hondureños.</p>
+										<p>El Programa Presidencial de Becas Honduras 20/20 tiene como objetivo brindar oportunidades educativas para un futuro mejor, potenciando al máximo la capacidad de formación de nuestros jóvenes hondureños.</p>
 										<ul class="contact">
 											<li class="fa-envelope-o"><a href="#">info@becashonduras2020.gob.hn</a></li>
 											<li class="fa-phone">(504) 000-0000</li>
@@ -181,7 +174,7 @@
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; EDUCREDITO. All rights reserved. <a href="https://html5up.net"> Coorporaciones</a>.</p>
+									<p class="copyright">&copy; EDUCREDITO. All rights reserved. <a href="https://html5up.net"> Corporaciones</a>.</p>
 								</footer>
 
 						</div>

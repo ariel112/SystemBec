@@ -36,7 +36,7 @@ Agregar Becario
 	   		
 	   		{!! Form::label('fecha_nacimiento','Fecha de Nacimiento',['class'=>'control-label']) !!}
 	   		<div style="width: 265px;">
-	   		 {!! Form::date('fecha_nacimiento',null,['class'=>'form-control','required','placeholder'=>'Nombre completo'])!!}	   
+	   		 {!! Form::date('fecha_nacimiento',null,['class'=>'form-control','required','placeholder'=>'Fecha de Nacimiento'])!!}	   
 	   	    </div>
 	   </div>
 	    	<br>
@@ -48,19 +48,19 @@ Agregar Becario
 	   <div class="form-group">
 	   		{!! Form::label('genero','Genero',['class'=>'control-label']) !!}
 	   		<div style="width: 190px;">
-	   		  {!! Form::select('genero',['Masculino'=> 'Masculino','Femenino'=>'Femenino'],null,['class'=>'form-control', 'required','placeholder'=>'Seleccione un Genero..'])!!}
+	   		  {!! Form::select('genero',['Masculino'=> 'Masculino','Femenino'=>'Femenino'],null,['class'=>'form-control', 'required','placeholder'=>'Seleccione un Género..'])!!}
 	   		</div>
 	   </div>
 	   <br>
 	   <div class="form-group">
-	   		{!! Form::label('telefono','Telefono',['class'=>'control-label']) !!}
+	   		{!! Form::label('telefono','Teléfono',['class'=>'control-label']) !!}
 	   		
-	   		   {!! Form::number('telefono',null,['class'=>'form-control','required', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el numero telefonico sin guiones. Ejemplo (56542535)'])!!}
+	   		   {!! Form::number('telefono',null,['class'=>'form-control','required', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el número telefónico sin guiones. Ejemplo (56542535)'])!!}
 	   		 
 	   </div>
 	   <br>
           <div class="form-group">
-	   		{!! Form::label('correo','Correo electronico',['class'=>'control-label']) !!}
+	   		{!! Form::label('correo','Correo electrónico',['class'=>'control-label']) !!}
 	   		{!! Form::email('correo',null,['class'=>'form-control','placeholder'=>'example@gmail.com'])!!}
 	   </div>
 	   
@@ -72,13 +72,13 @@ Agregar Becario
 	   <br>
 	     <div class="form-group">
 	   		{!! Form::label('carrera','Carrera',['class'=>'control-label']) !!}
-	   		{!! Form::text('carrera',null,['class'=>'form-control','required','placeholder'=>'Escriba la informacion....  '])!!}
+	   		{!! Form::text('carrera',null,['class'=>'form-control','required','placeholder'=>'Carrera  '])!!}
 	   </div>
 	    <br>
 	   
 	    <div class="form-group">
 	   		{!! Form::label('direccion','Direccion',['class'=>'control-label']) !!}
-	   		{!! Form::textarea('direccion',null,['class'=>'form-control','required', 'placeholder'=>'Escriba la direccion....  '])!!}
+	   		{!! Form::textarea('direccion',null,['class'=>'form-control','required', 'placeholder'=>'Escriba la dirección....  '])!!}
 	   </div>
 	  
 	   <br>
@@ -103,7 +103,7 @@ Agregar Becario
 	   <br>
 	   
 	    <div class="form-group">
-	   		{!! Form::label('ocupacion_madre','Ocupacion',['class'=>'control-label']) !!}
+	   		{!! Form::label('ocupacion_madre','Ocupación',['class'=>'control-label']) !!}
 	   		{!! Form::text('ocupacion_madre',null,['class'=>'form-control'])!!}
 	   </div>
 	   <br>
@@ -113,15 +113,15 @@ Agregar Becario
 	   </div>
 	   <br>
 	   <div class="form-group">
-	   		{!! Form::label('telefono_madre','Telefono',['class'=>'control-label']) !!}
+	   		{!! Form::label('telefono_madre','Teléfono',['class'=>'control-label']) !!}
 	   	
-	   		   {!! Form::number('telefono_madre',null,['class'=>'form-control', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el numero telefonico sin guiones. Ejemplo (56542535)'])!!}
+	   		   {!! Form::number('telefono_madre',null,['class'=>'form-control', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el número telefónico sin guiones. Ejemplo (56542535)'])!!}
 	   	 
 	   </div>
 	   <br>
 	 
 	   <div class="form-group">
-	   		{!! Form::label('correo_madre','Correo electronico',['class'=>'control-label']) !!}
+	   		{!! Form::label('correo_madre','Correo electrónico',['class'=>'control-label']) !!}
 	   		{!! Form::email('correo_madre',null,['class'=>'form-control','placeholder'=>'example@gmail.com'])!!}
 	   </div>
 	   <br>
@@ -141,7 +141,7 @@ Agregar Becario
 	   <br>
 	   
 	    <div class="form-group">
-	   		{!! Form::label('ocupacion_padre','Ocupacion',['class'=>'control-label']) !!}
+	   		{!! Form::label('ocupacion_padre','Ocupación',['class'=>'control-label']) !!}
 	   		{!! Form::text('ocupacion_padre',null,['class'=>'form-control'])!!}
 	   </div>
 	   <br>
@@ -151,8 +151,8 @@ Agregar Becario
 	   </div>
 	   <br>
 	   <div class="form-group">
-	   		{!! Form::label('telefono_padre','Telefono',['class'=>'control-label']) !!}
-	   		   		  {!! Form::number('telefono_padre',null,['class'=>'form-control', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el numero telefonico sin guiones. Ejemplo (56542535)'])!!}
+	   		{!! Form::label('telefono_padre','Teléfono',['class'=>'control-label']) !!}
+	   		   		  {!! Form::number('telefono_padre',null,['class'=>'form-control', 'minlength'=>'8' ,'maxlength'=>'8','placeholder'=>'Escriba el número telefónico sin guiones. Ejemplo (56542535)'])!!}
 	   		  
 	   </div>
 	   <br>

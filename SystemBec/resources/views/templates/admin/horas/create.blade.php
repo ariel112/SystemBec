@@ -28,7 +28,7 @@ Horas de actividades
 	   <div class="form-group">
 	   		{!! Form::label('activida','Actividades') !!}
 	   		<select name="actividades_id" class="form-control">
-	   			@foreach($actividades as $actividad)
+	   			@foreach($actividadesCC as $actividad)
 	   			<option value='{{$actividad->id}}'>{{$actividad->nombre}} -- {{$actividad->lugar}}</option>
 	   			@endforeach
 	   			 <input style="visibility: hidden;" type="text" name="becario_id" value="{{$becarios->id}} ">

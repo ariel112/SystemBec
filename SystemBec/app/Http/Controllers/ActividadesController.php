@@ -1,98 +1,83 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Actividad;
 use Laracasts\Flash\Flash;
 use Carbon\Carbon;
+use DB;
+
 
 class ActividadesController extends Controller
 {
+    /*Este constructor lo que hace es pasarme a espanol la fecha con carbon*/
     public function __construct(){
-          Carbon::setLocale('es');
-                                    }
+           Carbon::setLocale('es');
+                                 }
 
+    /*Sirve para la creacion de actividades pantalla donde se crea con todos los campos*/
     public function create(){
-        return view('templates.admin.actividades.agregar');
-						}
+    return view('templates.admin.actividades.agregar');
+						                }
 
+ 
+    /*Crea la actividad*/                        
+	  public function store(Request $request){ 
+    		   $actividades = new Actividad($request->all());
+    		   $carbon=Carbon::now();
+    		   $actividades->save();
+		       Flash::success('La actividad '.$actividades->name.'  a sido creado con exito');
+		return redirect()->route('Actividades.index');
+							                             }
 
+	  /*Pagina donde se muestran todas las actividades*/
+	  public function index(Request $request){
+		       $carbon=Carbon::now();
+           
+           $actividades=DB::select("
+           SELECT nombre, lugar,horas,estado,inicio,final,id
+           FROM actividades
+           WHERE estado='Activo'
+                             ");    
+ 
+		return view('templates.admin.actividades.index')->with('actividades',$actividades)->with('carbon',$carbon);
+	                                          }
 
-	public function store(Request $request){ 
-		
+    /*Muestra todas las actividades que ya fueron desactivadas*/                                        
+	  public function historial(Request $request){
+			     $actividades=DB::select("
+           SELECT a.id as idi,COUNT(C.id) as cantidad, a.nombre, a.lugar,a.inicio, a.final, a.horas
+            FROM becarios_actividades C
+            RIGHT JOIN actividades A
+            ON(A.id=C.actividades_id)
+            WHERE A.estado='Desactivo'
+            GROUP BY idi, a.nombre, a.lugar,a.inicio, a.final, a.horas ");    
+		return view('templates.admin.actividades.historial')->with('actividades',$actividades);
+	                                             }
 
-		  $actividades = new Actividad($request->all());
-		  $carbon=Carbon::now();
-		  $actividades->save();
-		   Flash::success('La actividad '.$actividades->name.'  a sido creado con exito');
-		   return redirect()->route('Actividades.index');
-							}					
-	
-	public function index(Request $request){
-		//$actividades = actividadesyecto::searchp($request->name)->orderBy('id','DESC')->paginate(10);
-              $carbon=Carbon::now();
-              $actividades=Actividad::orderBy('id','DESC')->paginate(19);
+    /*Guardo cambios de las actividades*/
+  	public function update(Request $request, $id){
+           $actividades =Actividad::find($id);
+           $actividades->fill($request->all());
+           $actividades->save();
+           Flash::success('La actividad '.$actividades->nombre.' a sido actualizado con exito');
+    return redirect()->route('Actividades.index');
+                                                 }
 
-          //consulta con la base de datos para traer la fecha de creacion del rtn del empleado
-          /*
-          ->join('rtn_empleados','rtn_empleados.empleado_id','=','empleados.id')
-          ->where('empleados.id','=',5)
-          ->orderBy('rtn_empleados.created_at', 'asc')
-          ->limit('1')
-          ->select('rtn_empleados.created_at as fecha')
-          ->get('rtn_empleados.created_at');
-          */
-          
-          
-         
-              
-
-              //});
-
-       
-		  return view('templates.admin.actividades.index')->with('actividades',$actividades)->with('carbon',$carbon);
-	}
-
-	public function historial(Request $request){
-			      $actividades=Actividad::orderBy('id','DESC')->paginate(2);
-              
-
-              //});
-
-       
-		  return view('templates.admin.actividades.historial')->with('actividades',$actividades);
-
-
-	}
-
-
-	public function update(Request $request, $id){
-          $actividades =Actividad::find($id);
-          $actividades->fill($request->all());
-          $actividades->save();
-          Flash::success('La actividad '.$actividades->nombre.' a sido actualizado con exito');
-          return redirect()->route('Actividades.index');
-     }
-
-
-     public function edit($id){
-
-     	$actividades =Actividad::find($id);
-
-     	return view('templates.admin.actividades.editar')->with('actividades',$actividades);
-     }
-
-     public function destroy($id){
-
-
-     	
-     	$actividad= Actividad::find($id);
-     	$actividad->delete();
-          Flash::error('La actividad '.$actividad->nombre.' a sido borrada con exito');
-          return redirect()->route('Actividades.index');	
+    /*Edito las actividades*/                                             
+    public function edit($id){
+     	     $actividades =Actividad::find($id);
+    return view('templates.admin.actividades.editar')->with('actividades',$actividades);
+                             }
+    /*Este metodo es de eliminar pero yo lo utilice para cambiar el estado de la actiividad*/
+    public function destroy($id){     	
+           $actividad= Actividad::find($id);
+           $actividad->estado='Desactivo';
+           $actividad->save();
+           Flash::error('La actividad '.$actividad->nombre.' a sido desactivada con exito');
+    return redirect()->route('Actividades.index');	
    
-     }
+                                }
 	
 
 }

@@ -87,7 +87,7 @@ class Forma03Controller extends Controller
 				 $forma03->save();                             
 
 
-                return redirect()->route('Becarios.index-forma03',$request->becario_id);
+                return redirect()->route('Becarios.perfil',$request->becario_id);
 											
 	          }
     

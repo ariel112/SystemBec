@@ -32,9 +32,11 @@ Route::get('/', function () {
 
   /*-------------------------------------------------------------*/
 
-  /*Ruta para el manejo de becarios*/
+    /*Ruta para el manejo de becarios*/
   Route::resource('Becarios','BecariosController');
+  Route::get('Becarios/{becarios}', 'BecariosController@becariosFilter');
 
+  
 
      //Ruta para acceder al perfil del becario
      Route::get('becario-perfil/{id}',[ 
@@ -67,6 +69,13 @@ Route::get('/', function () {
       'as'=>'Becarios.mostrar_horas',
       'uses'=>'BecariosController@mostrar'
                                        ]);
+
+     //Muestro el historico de horas detallada de cada becario
+     Route::get('becarios/horas/historicos/{id}',[
+      'as'=>'Becarios.mostrar_historicos',
+      'uses'=>'BecariosController@mostrar_historico'
+                                       ]);
+
      //Ruta que muestro lo de la camara
      Route::get('becarios/fotografia/{id}',[
       'as'=>'Becarios.foto',
@@ -149,6 +158,12 @@ Route::get('/', function () {
       'as'=>'Becarios.asignar.update',
       'uses'=>'BecariosController@update_asignar'
                                       ]);
+
+    //Abner: retorna en un json los empleados filtrador por el nombre
+    //Route::get('empleados/{empleados}', 'BecariosController@becariosFilter');
+
+     //Route::get('empleados/{empleados}', ['middleware'=>'cors','BecariosController@becariosFilter']);
+
 
 
 

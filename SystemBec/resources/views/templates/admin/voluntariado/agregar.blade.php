@@ -1,17 +1,10 @@
 @extends('templates.main')
 
 
-@section('content')
-
-
-
-<!-- Header -->
-								
-
-								
-@section('subtitle')
-Agregar Actividad
-@endsection
+@section('content')								
+	@section('subtitle')
+	Agregar Actividad
+	@endsection
 
 <div  class="row">
 <div class="col-md-5">
@@ -22,7 +15,7 @@ Agregar Actividad
 	   <div class="form-group" >
 	   
 	   		{!! Form::label('name','Nombre de la actividad de voluntariado') !!}
-	   		{!! Form::text('name',null,['class'=>'form-control','required','placeholder'=>'Nombre del proyecto'])!!}
+	   		{!! Form::text('name',null,['class'=>'form-control','required','placeholder'=>'Nombre de la actividad'])!!}
 	   	
 	   </div>
        <br>
@@ -34,20 +27,18 @@ Agregar Actividad
 	   		</div>
 	   		<input style="visibility: hidden;" type="text" name="becario_id" value="{{$becarios->id}} ">
 	   </div>
+	   <div class="form-group" >
+	   		{!! Form::label('name','Fecha de la actividad') !!}
+	   		<div style="width: 280px;">
+	   		    {!! Form::date('created_at',null,['class'=>'form-control', 'required'])!!}
+	   		</div>	   		
+	   </div>
 	   	     <div align="center">
 	   		{!! Form::submit('Registrar',['class'=>'btn btn-info','id'=>'btnEmpty' ]) !!}
 	   		</div>
 	   </div>
 
-	</div>						
-
-
-
-   <!-- Content -->
-							       
+	</div>									       
 <script  src="{{asset('plugins/js-especiales/validacion.js')}}"> </script>
-
-
-
 
 @endsection

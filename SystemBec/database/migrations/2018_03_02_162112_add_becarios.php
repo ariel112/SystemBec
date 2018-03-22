@@ -28,7 +28,7 @@ class AddBecarios extends Migration
             $table->string('cuenta_bancaria',80)->nullable();
             $table->string('nombre_banco',80)->nullable();
             $table->enum('genero',['Masculino','Femenino']);
-            $table->enum('cargo',['Guia','Becario'])->default('Becario');
+            $table->enum('cargo',['Guia','Becario','Embajador'])->default('Becario');
             $table->string('password',99)->nullable();
             $table->integer('id_guia')->nullable();
 

@@ -3,12 +3,7 @@
 
 @section('content')
 
-
-
-<!-- Header -->
-								
-
-								
+						
 @section('subtitle')
 Agregar Actividad
 @endsection
@@ -22,13 +17,13 @@ Agregar Actividad
 	   <div class="form-group" >
 	   
 	   		{!! Form::label('name','Nombre de la actividad') !!}
-	   		{!! Form::text('nombre',null,['class'=>'form-control','required','placeholder'=>'Nombre del proyecto'])!!}
+	   		{!! Form::text('nombre',null,['class'=>'form-control','required','placeholder'=>'Nombre de la actividad'])!!}
 	   	
 	   </div>
        <br>
-
-       <div class="form-group" >
-	   		{!! Form::label('name','Horas de la actividad') !!}
+       	{!! Form::label('name','Horas de la actividad') !!}
+	   	
+       <div class="form-group" style="width: 110px;" >
 	   		<div style="width: 80px;">
 	   		    {!! Form::number('horas',null,['class'=>'form-control','min'=>'1','max'=>'12', 'required'])!!}
 	   		</div>
@@ -37,18 +32,18 @@ Agregar Actividad
 	   <br>
 	   <div class="form-group" >
 	   		{!! Form::label('lugar','Lugar de la actividad') !!}
-	   		{!! Form::text('lugar',null,['class'=>'form-control','required','placeholder'=>'lugar de la actividad'])!!}
+	   		{!! Form::text('lugar',null,['class'=>'form-control','required','placeholder'=>'Lugar de la actividad'])!!}
 	   </div>
        <br>
        <div class="form-group" >
-	   		{!! Form::label('inicio','Nombre de la actividad') !!}
+	   		{!! Form::label('inicio','Inicio de la actividad') !!}
 	   		<div style="width: 265px;">
 	   		{!! Form::date('inicio',null,['class'=>'form-control','required'])!!}
 	   	    </div>
 	   </div>
        <br>
        <div class="form-group" >
-	   		{!! Form::label('final','Nombre de la actividad') !!}
+	   		{!! Form::label('final','Fin de la actividad') !!}
 	   		<div style="width: 265px;">
 	   		{!! Form::date('final',null,['class'=>'form-control','required'])!!}
 	   	    </div>
