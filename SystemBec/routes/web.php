@@ -29,6 +29,12 @@ Route::get('/', function () {
               'uses'=>  'ActividadesController@destroy',
               'as'=> 'Actividades.destroy'
                ]);
+   Route::get('Inicio',
+       [
+              'uses'=>  'ActividadesController@inicio',
+              'as'=> 'Actividades.inicio'
+               ]
+ );
 
   /*-------------------------------------------------------------*/
 
@@ -173,78 +179,10 @@ Route::get('/', function () {
 
 
 
-
-
-
-     /*Rutas se creo un grupo de rutas con el prefijo admin*/
-     Route::group(['prefix'=>'admin'], function(){
-    
-     //Ruta para acceder al perfil del empleado
-     Route::get('empleadosPerfil/{id}',[ 
-        'as'=>'empleados.perfil',
-        'uses'=>'EmpleadosController@perfil']       
-                                
-                                );
-
-
-     //Ruta para crear los RTN---------------
-     //este es la ruta para el index
-     Route::get('empleadosRtn/{id}',[ 
-        'as'=>'empleados.indexRTN',
-        'uses'=>'RtnController@index']       
-                                );
-     //esta es la ruta para el create es una vista de un formulario
-     Route::get('empleadosRTN/{id}/create',
-      [
-        'as'=>'empleados.indexRTNCREATE',
-        'uses'=>'RtnController@create'
-      ]);
-     //aqui realiza la operacion de guardado y hace la relacion praticamente guarda
-     Route::POST('empleados/crear',
-      [
-        'as'=>'empleadosRTN.store',
-        'uses'=>'RtnController@store'
-      ]);
-      //-------------------------------------
-
-       //Ruta para crear los antecedentes penales---------------
-     //este es la ruta para el index
-     Route::get('empleadosATCPE/{id}',[ 
-        'as'=>'empleados.indexATCPE',
-        'uses'=>'PenalesController@index']       
-                                );
-     //esta es la ruta para el create es una vista de un formulario
-     Route::get('empleadosATCPE/{id}/create',
-      [
-        'as'=>'empleados.indexATCPECREATE',
-        'uses'=>'PenalesController@create'
-      ]);
-     //aqui realiza la operacion de guardado y hace la relacion praticamente guarda
-     Route::POST('empleados/crearPE',
-      [
-        'as'=>'empleadosATCPE.store',
-        'uses'=>'PenalesController@store'
-      ]);
-      //-------------------------------------
-
-       
-
-
   
 
    
 
 
           
-     //Ruta que me lleva a todos los accesos de empleadocontroller edit,create,show
-    Route::resource('empleados','EmpleadosController');
-
-                                           });
-
-
-
-    //Ruta que me lleva ala parte de creacion de los proyectos accedos a todas las rutas
-   Route::group(['prefix'=>'proyect'], function(){
-   Route::resource('proyectos','ProyectosController'); 
-                                                  });
-
+    

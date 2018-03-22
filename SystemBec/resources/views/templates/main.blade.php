@@ -93,7 +93,7 @@
 										<h2>Menú</h2>
 									</header>
 									<ul>
-										<li><a id="decoracion" href="index.html">Inicio</a></li>
+										<li><a id="decoracion" href="{{route('Actividades.inicio')}}">Inicio</a></li>
 								
 										<li>
 											<span class="opener">Actividades</span>

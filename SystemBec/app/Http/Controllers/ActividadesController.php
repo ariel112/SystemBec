@@ -77,7 +77,10 @@ class ActividadesController extends Controller
            Flash::error('La actividad '.$actividad->nombre.' a sido desactivada con exito');
     return redirect()->route('Actividades.index');	
    
-                                }
+    /*Inicio acceso ala vista de inicio*/                            } 
+    public function inicio(){
+    return view('welcome');
+                            }                            
 	
 
 }
