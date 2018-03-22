@@ -165,8 +165,8 @@
 										<p>El Programa Presidencial de Becas Honduras 20/20 tiene como objetivo brindar oportunidades educativas para un futuro mejor, potenciando al máximo la capacidad de formación de nuestros jóvenes hondureños.</p>
 										<ul class="contact">
 											<li class="fa-envelope-o"><a href="#">info@becashonduras2020.gob.hn</a></li>
-											<li class="fa-phone">(504) 000-0000</li>
-											<li class="fa-home">Col. Lomas del Guijarro frente a mueblería Elements,<br />
+											<li class="fa-phone">(504) 3265-9265</li>
+											<li class="fa-home">Col. Lomas del Guijarro Frente a Mueblería Elements,<br />
 											Tegucigalpa</li>
 										</ul>
 									</section>	

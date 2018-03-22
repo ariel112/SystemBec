@@ -13,7 +13,7 @@
                     </header>
                     <section style="font-size: 21px; " id="piepagina">  
                       
-                      <p id="letra">Este sistema está diseñado para facilitar a becas 20/20 la Administración  y control de sus becarios.</p>
+                      <p id="letra">Este sistema está diseñado para facilitar a BECAS 20/20 la Administración  y Control de sus Becarios.</p>
                     </section>
                   </div>
                   <span class="image object">
