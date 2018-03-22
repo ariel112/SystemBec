@@ -44,11 +44,11 @@
                                     <header id="header">
 									<strong id="titulos1">@yield('subtitle','Home') <strong style="color: #b7b3b3;">EDUCREDITO</strong></strong>
 									<ul class="icons" style="color: #c7ced4">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+										<li><a href="https://twitter.com/?lang=es" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.snapchat.com/l/es/" class="icon fa-snapchat-ghost" target="_blank"><span class="label">Snapchat</span></a></li>
+										<li><a href="https://www.instagram.com/?hl=es-la" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+										<li><a href="https://medium.com/" class="icon fa-medium" target="_blank"><span class="label">Medium</span></a></li>
 									</ul>
                 								</header>
                          <br>
